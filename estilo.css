@@ -1,0 +1,48 @@
+:root {
+  --fondo: #f7faf8;
+  --texto: #1b1f1d;
+  --suave: #5b6560;
+  --acento: #2e7d5b;
+  --acento-texto: #ffffff;
+  --linea: #dfe6e2;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fondo: #121614;
+    --texto: #e7ece9;
+    --suave: #a3ada8;
+    --acento: #6fcf9f;
+    --acento-texto: #0d1f16;
+    --linea: #2a312d;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+main { max-width: 640px; margin: 0 auto; padding: 40px 16px 64px; }
+a { color: var(--acento); }
+h1 { font-size: 2.2rem; margin: 0.2em 0; }
+h2 { font-size: 1.2rem; margin-top: 2em; }
+header { text-align: center; margin-bottom: 32px; }
+.logo {
+  width: 88px; height: 88px; margin: 0 auto; border-radius: 50%;
+  border: 10px solid var(--linea); border-top-color: var(--acento); border-right-color: var(--acento);
+  transform: rotate(-45deg);
+}
+.lema { font-size: 1.25rem; color: var(--suave); margin: 0; }
+.ventajas { list-style: none; padding: 0; }
+.ventajas li { padding: 10px 0; border-bottom: 1px solid var(--linea); }
+.ventajas li::before { content: "✓ "; color: var(--acento); font-weight: bold; }
+.cta { text-align: center; margin: 32px 0 8px; }
+.boton {
+  display: inline-block; padding: 14px 28px; border-radius: 999px;
+  background: var(--acento); color: var(--acento-texto); text-decoration: none; font-weight: 600;
+}
+.nota { color: var(--suave); font-size: 0.9rem; text-align: center; }
+section { margin-top: 48px; padding-top: 8px; border-top: 1px solid var(--linea); }
+footer { margin-top: 48px; }
+hr { border: 0; border-top: 1px solid var(--linea); margin: 48px 0; }
